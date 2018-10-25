@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<title>AngularJS Whiteboard</title>
+</head>
+
+<body>
+
+<div ng-app="">
+ 
+
+
+<textarea name="message" rows="10" cols="30" ng-model="writing">
+</textarea>
+<span>    Marker color: <input type = "text" size = "7" ng-model="marker_color"></span>
+<br>
+<br>
+
+<div id = "whiteboard" ng-bind="writing" ng-style="{ 'color' : marker_color }">	
+</div>
+
+</div>
+
+</body>
+</html>

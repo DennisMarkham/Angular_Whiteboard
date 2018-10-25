@@ -1,0 +1,13 @@
+#whiteboard 
+{
+	font-family: cursive;
+	font-size: 24px;
+	background-image: url('whiteboard_pic.png');
+	background-repeat: no-repeat;
+	padding: 25px;
+	height: 700px;
+}
+
+span {
+	margin-left: 24px;
+}
