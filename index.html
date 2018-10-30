@@ -17,12 +17,12 @@
 <textarea name="message" rows="10" cols="30" ng-model="writing">
 </textarea>
 <span>    Marker color: <input type = "text" size = "7" ng-model="marker_color"></span>
-<span>    Writing size: <input type = "text" size = "7" ng-model="writing_size"></span>
+
 
 <br>
 <br>
 
-<div id = "whiteboard" ng-bind="writing" ng-style="{ color : marker_color, 'font-size': writing_size + 'px'}">	
+<div id = "whiteboard" ng-bind="writing | limitTo : 34 " ng-style="{ color : marker_color}">	
 </div>
 
 
