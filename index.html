@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <title>AngularJS Whiteboard</title>
 </head>
@@ -16,7 +18,9 @@
 
 <textarea name="message" rows="10" cols="30" ng-model="writing">
 </textarea>
+<button>Erase</button>
 <span>    Marker color: <input type = "text" size = "7" ng-model="marker_color"></span>
+
 
 
 <br>
@@ -27,6 +31,14 @@
 
 
 </div>
-
+<script>
+$("button").click(function(event){
+  event.preventDefault();
+  $("textarea").val('');
+  $("#whiteboard").empty();
+  //The erase function now works, but the one-size fits all character limit doesn't do very well
+  console.log("Erasing");
+});
+</script>
 </body>
 </html>
